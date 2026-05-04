@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <!-- A-Frame -->
+  <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+  
+  <!-- AR.js -->
+  <script src="https://cdn.jsdelivr.net/gh/AR-js-org/AR.js/aframe/build/aframe-ar.js"></script>
+</head>
+
+<body style="margin: 0; overflow: hidden;">
+
+<a-scene
+  embedded
+  arjs="sourceType: webcam; debugUIEnabled: false;">
+
+  <!-- MARCADOR -->
+  <a-marker type="pattern" url="pattern-marker.patt">
+
+    <!-- SUA LOGO -->
+    <a-entity
+      gltf-model="logo_atual.glb"
+      scale="0.5 0.5 0.5"
+      position="0 0 0"
+      rotation="0 0 0"
+      animation="property: rotation; to: 0 360 0; loop: true; dur: 6000">
+    </a-entity>
+
+  </a-marker>
+
+  <!-- CÂMERA -->
+  <a-entity camera></a-entity>
+
+</a-scene>
+
+</body>
+</html>
